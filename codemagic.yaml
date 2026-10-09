@@ -16,6 +16,6 @@ workflows:
       - name: Flutter tests
         script: flutter test
       - name: Build unsigned iOS Simulator app
-        script: flutter build ios --simulator --release
+        script: flutter build ios --simulator --debug
     artifacts:
       - build/ios/iphonesimulator/Runner.app

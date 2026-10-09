@@ -18,7 +18,7 @@ flutter config --enable-swift-package-manager
 flutter pub get
 flutter analyze
 flutter test
-flutter build ios --simulator --release
+flutter build ios --simulator --debug
 ```
 
 The simulator artifact is generated at:
