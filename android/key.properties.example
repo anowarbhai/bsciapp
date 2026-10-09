@@ -1,0 +1,4 @@
+storePassword=REPLACE_WITH_PRIVATE_PASSWORD
+keyPassword=REPLACE_WITH_PRIVATE_PASSWORD
+keyAlias=upload
+storeFile=../app/upload-keystore.jks
