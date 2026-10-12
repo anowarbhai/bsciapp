@@ -1,4 +1,24 @@
 workflows:
+  android-unsigned-production:
+    name: BSCI Android Production Compile
+    instance_type: linux_x2
+    max_build_duration: 60
+    environment:
+      flutter: stable
+      vars:
+        CM_PRODUCTION_UNSIGNED: "true"
+    scripts:
+      - name: Resolve Flutter packages
+        script: flutter pub get
+      - name: Static analysis
+        script: flutter analyze
+      - name: Flutter tests
+        script: flutter test
+      - name: Compile unsigned production APK
+        script: flutter build apk --release
+    artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk
+
   android-production:
     name: BSCI Android Production APK
     instance_type: linux_x2

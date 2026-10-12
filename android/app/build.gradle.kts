@@ -15,6 +15,7 @@ if (keystorePropertiesFile.exists()) {
 }
 val ciKeystorePath = System.getenv("CM_KEYSTORE_PATH")
 val hasCiSigning = !ciKeystorePath.isNullOrBlank()
+val produceUnsignedRelease = System.getenv("CM_PRODUCTION_UNSIGNED") == "true"
 
 android {
     namespace = "com.bscibd.bsciapp"
@@ -60,7 +61,9 @@ android {
 
     buildTypes {
         release {
-            signingConfig = if (hasCiSigning || keystorePropertiesFile.exists()) {
+            signingConfig = if (produceUnsignedRelease) {
+                null
+            } else if (hasCiSigning || keystorePropertiesFile.exists()) {
                 signingConfigs.getByName("release")
             } else {
                 // Local device builds remain installable until the private Play upload key is supplied.
