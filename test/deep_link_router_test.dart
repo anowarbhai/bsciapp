@@ -4,7 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   test('routes HTTPS and custom BSCI links to matching app sections', () {
     expect(
-      resolveDeepLink(Uri.parse('https://bsci.digitrixlabs.io/events/8')),
+      resolveDeepLink(Uri.parse('https://bscibd.com/events/8')),
       DeepLinkDestination.events,
     );
     expect(

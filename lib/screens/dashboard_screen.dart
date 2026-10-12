@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:bsciapp/api/api_service.dart';
 import 'package:bsciapp/app_preferences.dart';
+import 'package:bsciapp/config/app_config.dart';
 import 'package:bsciapp/deep_link_router.dart';
 import 'package:bsciapp/screens/login_screen.dart';
 import 'package:bsciapp/screens/faculty_detail_screen.dart';
@@ -61,7 +62,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Set<int> _registeredEventIds = {};
   String? _handledDeepLink;
 
-  String get _webBase => _api.baseUrl.replaceFirst(RegExp(r'/api/?$'), '');
+  String get _webBase => AppConfig.webBaseUrl;
 
   @override
   void initState() {

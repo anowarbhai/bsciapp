@@ -6,7 +6,7 @@ The project is configured for iPhone and iPad with:
 - bundle identifier: `com.bscibd.bsciapp`
 - minimum iOS version: 15.0
 - custom deep-link scheme: `bsci://`
-- universal-link domain: `https://bsci.digitrixlabs.io`
+- universal-link domains: `https://bscibd.com`, `https://www.bscibd.com`
 - Flutter Swift Package Manager integration for native plugins
 
 ## Simulator validation without an Apple Developer account
@@ -43,7 +43,7 @@ Before producing a signed IPA:
 After Apple supplies the Team ID, publish an Apple App Site Association file at:
 
 ```text
-https://bsci.digitrixlabs.io/.well-known/apple-app-site-association
+https://bscibd.com/.well-known/apple-app-site-association
 ```
 
 Its application identifier must use `<APPLE_TEAM_ID>.com.bscibd.bsciapp`.

@@ -34,7 +34,7 @@ class _NoticeScreenState extends State<NoticeScreen> {
       'summary':
           'The Scientific Sub-Committee is pleased to announce that the deadline for abstract & complex clinical case submissions has been extended to August 15, 2026. Accepted abstracts will be published in the supplementary edition of the BJCI.',
       'authority': 'Scientific Sub-Committee, BSCI',
-      'pdf_url': 'https://bsci.digitrixlabs.io/notices/BSCI-SCI-2026-089.pdf',
+      'pdf_url': 'https://bscibd.com/notices/BSCI-SCI-2026-089.pdf',
       'pdf_size': '240 KB',
     },
     {
@@ -48,7 +48,7 @@ class _NoticeScreenState extends State<NoticeScreen> {
       'summary':
           'Cardiologists and intervention fellows are invited to submit unedited DICOM recordings of interesting and complex coronary or structural cases for transmission during BD Intervention 2026.',
       'authority': 'Conference Secretariat, Pan Pacific Sonargaon',
-      'pdf_url': 'https://bsci.digitrixlabs.io/notices/BSCI-CONF-2026-084.pdf',
+      'pdf_url': 'https://bscibd.com/notices/BSCI-CONF-2026-084.pdf',
       'pdf_size': '380 KB',
     },
     {
@@ -62,7 +62,7 @@ class _NoticeScreenState extends State<NoticeScreen> {
       'summary':
           'All Life and General members are requested to review and verify their official BMDC registration number, contact phone, and hospital affiliation in the online portal before printing of the annual directory.',
       'authority': 'BSCI Central Secretariat',
-      'pdf_url': 'https://bsci.digitrixlabs.io/notices/BSCI-MEM-2026-078.pdf',
+      'pdf_url': 'https://bscibd.com/notices/BSCI-MEM-2026-078.pdf',
       'pdf_size': '195 KB',
     },
     {
@@ -76,7 +76,7 @@ class _NoticeScreenState extends State<NoticeScreen> {
       'summary':
           'The 12th Annual General Meeting of the Bangladesh Society of Cardiovascular Intervention will be held on Saturday, 17 October 2026 at 06:30 PM at Grand Ballroom, Pan Pacific Sonargaon, Dhaka.',
       'authority': 'Secretary General, BSCI',
-      'pdf_url': 'https://bsci.digitrixlabs.io/notices/BSCI-AGM-2026-071.pdf',
+      'pdf_url': 'https://bscibd.com/notices/BSCI-AGM-2026-071.pdf',
       'pdf_size': '510 KB',
     },
     {
@@ -90,7 +90,7 @@ class _NoticeScreenState extends State<NoticeScreen> {
       'summary':
           'Applications are invited for 5 competitive travel grants to support young cardiology fellows presenting accepted original research at BD Intervention 2026.',
       'authority': 'Academic & Fellowship Committee',
-      'pdf_url': 'https://bsci.digitrixlabs.io/notices/BSCI-ACA-2026-065.pdf',
+      'pdf_url': 'https://bscibd.com/notices/BSCI-ACA-2026-065.pdf',
       'pdf_size': '1.2 MB',
     },
   ];
