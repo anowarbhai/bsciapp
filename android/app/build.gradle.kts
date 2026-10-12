@@ -13,6 +13,8 @@ val keystorePropertiesFile = rootProject.file("key.properties")
 if (keystorePropertiesFile.exists()) {
     keystoreProperties.load(FileInputStream(keystorePropertiesFile))
 }
+val ciKeystorePath = System.getenv("CM_KEYSTORE_PATH")
+val hasCiSigning = !ciKeystorePath.isNullOrBlank()
 
 android {
     namespace = "com.bscibd.bsciapp"
@@ -39,19 +41,26 @@ android {
     }
 
     signingConfigs {
-        if (keystorePropertiesFile.exists()) {
+        if (hasCiSigning || keystorePropertiesFile.exists()) {
             create("release") {
-                keyAlias = keystoreProperties["keyAlias"] as String
-                keyPassword = keystoreProperties["keyPassword"] as String
-                storeFile = file(keystoreProperties["storeFile"] as String)
-                storePassword = keystoreProperties["storePassword"] as String
+                if (hasCiSigning) {
+                    keyAlias = System.getenv("CM_KEY_ALIAS")
+                    keyPassword = System.getenv("CM_KEY_PASSWORD")
+                    storeFile = file(ciKeystorePath!!)
+                    storePassword = System.getenv("CM_KEYSTORE_PASSWORD")
+                } else {
+                    keyAlias = keystoreProperties["keyAlias"] as String
+                    keyPassword = keystoreProperties["keyPassword"] as String
+                    storeFile = file(keystoreProperties["storeFile"] as String)
+                    storePassword = keystoreProperties["storePassword"] as String
+                }
             }
         }
     }
 
     buildTypes {
         release {
-            signingConfig = if (keystorePropertiesFile.exists()) {
+            signingConfig = if (hasCiSigning || keystorePropertiesFile.exists()) {
                 signingConfigs.getByName("release")
             } else {
                 // Local device builds remain installable until the private Play upload key is supplied.
